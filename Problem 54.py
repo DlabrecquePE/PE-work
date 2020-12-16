@@ -34,7 +34,7 @@ def poker_value(hand):
     return int(''.join([str(hand_value)] + r_result), 16)
 
 
-f, p1_wins = open('p054_poker.txt', 'r'), 0
+f, p1_wins = open('data/p054_poker.txt', 'r'), 0
 f1 = f.readlines()
 for hand in f1:
     cards = hand.split()

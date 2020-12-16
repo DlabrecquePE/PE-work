@@ -16,7 +16,7 @@ def alpha_value(word):
         sum_array.append(ord(char) - 64)
     return sum(sum_array)
 
-data = open('P022_names.txt', 'r')
+data = open('data/p022_names.txt', 'r')
 raw_data = data.read()
 
 parse = raw_data.split(',')

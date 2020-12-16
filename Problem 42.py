@@ -19,7 +19,7 @@ def alpha_value(word):
     return sum(sum_array)
 
 
-data = open('p042_words.txt', 'r')
+data = open('data/p042_words.txt', 'r')
 raw_data = data.read().split(',')
 parsed = [word.strip('"') for word in raw_data]
 tri_nums = [(n * (n + 1) / 2) for n in range(1, 20)]

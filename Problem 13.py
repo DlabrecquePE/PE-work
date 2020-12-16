@@ -103,7 +103,7 @@
 # 20849603980134001723930671666823555245252804609722
 # 53503534226472524250874054075591789781264330331690
 
-data = open("c:\\Users\Gordan\Documents\Python Scripts\project Euler\Problem 13 Data.txt", "r")
+data = open("data/p013_data.txt", "r")
 
 data_array = []
 for line in data.readlines():

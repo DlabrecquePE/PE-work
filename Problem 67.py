@@ -17,7 +17,7 @@
 # problem, as there are 299 altogether! If you could check one trillion (1012) routes every second it would take
 # over twenty billion years to check them all. There is an efficient algorithm to solve it. ;o)
 
-data = open('p067_triangle.txt', 'r')
+data = open('data/p067_triangle.txt', 'r')
 triangle = data.readlines()
 tri_dict = {i: x.strip('\n').split() for i, x in enumerate(triangle)}
 for x in range(len(tri_dict.keys())):

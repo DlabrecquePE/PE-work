@@ -31,7 +31,7 @@
 import numpy as np
 
 # Load the grid into a matrix
-data = open("Problem 11 Data.txt", "r")
+data = open("data/p011_data.txt", "r")
 raw_data = (data.read().rstrip().split('\n'))
 string_array = []
 for i in range(len(raw_data)):

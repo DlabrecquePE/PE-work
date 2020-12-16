@@ -32,7 +32,7 @@
 # However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot
 # be solved by brute force, and requires a clever method! ;o
 
-data = open('Problem 18 Data.txt', 'r')
+data = open('data/p018_data.txt', 'r')
 triangle = data.readlines()
 tri_dict = {i: x.strip('\n').split() for i, x in enumerate(triangle)}
 for x in range(len(tri_dict.keys())):

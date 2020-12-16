@@ -20,7 +20,7 @@
 # that the plain text must contain common English words, decrypt the message and find the sum of the ASCII values
 # in the original text.
 
-data = open("p059_cipher.txt", 'r')
+data = open("data/p059_cipher.txt", 'r')
 cipher = [int(char)for char in data.read().split(',')]
 cipher.append(32)
 cipher.append(32)

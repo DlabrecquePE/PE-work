@@ -9,7 +9,7 @@
 # Given that the three characters are always asked for in order, analyse the file so as to determine the shortest
 # possible secret passcode of unknown length.
 
-data = open('p079_keylog.txt', 'r')
+data = open('data/p079_keylog.txt', 'r')
 keylogs = []
 for line in data.readlines():
     keylogs.append([int(char) for char in line.strip('\n')])
