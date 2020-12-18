@@ -5,7 +5,4 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
-n = 999
-
-res = n // 3 * 1002 + n // 5 * 1000 - n // 15 * 1005
-print(res // 2)
+print((333*(3+999)+199*(5+995)-66*(15+990))/2)
