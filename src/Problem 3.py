@@ -20,17 +20,20 @@ def gen_primes():
         q += 1
 
 
-def factorize(num, primes=gen_primes()):
-    """ Returns a list of prime factors of num """
-    if not float(num).is_integer() or num < 1:
-        raise Exception("Error: Can only factorize positive integers.")
-    prime_factors = []
-    for prime in primes:
-        while not num % prime:
-            prime_factors.append(prime)
-            num = num // prime
-        if num == 1:
-            return prime_factors
+def factorize(n):
+    """ Returns a list of prime factors of n """
+    primer, factors, p_stop = gen_primes(), [], int(n ** 0.5) + 1
+    prime = next(primer)
+    while True:
+        if not n % prime:
+            factors.append(prime)
+            while not n % prime:
+                n = n // prime
+                if prime >= n:
+                    return factors
+        if prime > p_stop:
+            return factors + [n]
+        prime = next(primer)
 
 
 res = factorize(factorize_this)
