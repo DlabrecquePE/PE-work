@@ -5,23 +5,21 @@
 # What is the 10 001st prime number?
 
 
-def is_prime(num):
-    if num == 2 or num == 3:
-        return True
-    if num < 2 or num % 2 == 0:
-        return False
-    for x in range(3, int(num ** 0.5) + 1, 2):
-        if not num % x:
-            return False
-    return True
+def gen_primes():
+    """ Generate an infinite sequence of prime numbers """
+    d, q = {}, 2
+    while True:
+        if q not in d:
+            yield q
+            d[q * q] = [q]
+        else:
+            for p in d[q]:
+                d.setdefault(p + q, []).append(p)
+            del d[q]
+        q += 1
 
 
-prime_array = []
-candidate_value = 2
-
-while len(prime_array) < 10001:
-    if is_prime(candidate_value):
-        prime_array.append(candidate_value)
-    candidate_value += 1
-
-print(prime_array[10000])
+primer = gen_primes()
+for _ in range(10000):
+   next(primer)
+print(next(primer))
