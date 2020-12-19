@@ -26,7 +26,7 @@
 # Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.
 # What is the value of this product?
 
-data = open("data/p008_data.txt", "r")
+data = open("/data/p008_data.txt", "r")
 
 raw_data = data.read()
 parsed_data = raw_data.replace("\n", "")
